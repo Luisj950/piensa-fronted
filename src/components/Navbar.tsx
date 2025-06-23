@@ -13,13 +13,12 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/" style={{ textDecoration: 'none', color: '#333', fontWeight: 'bold' }}>
-          Mi App
-        </Link>
+        <Link to="/">Mi App Veterinaria</Link>
       </div>
       <div className="navbar-links">
         {isAuthenticated ? (
           <>
+            <Link to="/mis-mascotas">Mis Mascotas</Link> {/* <-- ENLACE AÑADIDO */}
             <Link to="/profile">Perfil</Link>
             <button onClick={handleLogout} className="logout-button">Cerrar Sesión</button>
           </>
