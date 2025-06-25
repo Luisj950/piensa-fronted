@@ -1,13 +1,13 @@
 /* 1. Definición de la Paleta de Colores y Fuentes */
 :root {
-  --color-primary: #20c997; /* Un verde azulado (teal) para salud y confianza */
-  --color-primary-hover: #1baa80; /* Un tono más oscuro para el hover */
-  --color-accent: #fd7e14; /* Naranja cálido y amigable para acentos */
-  --color-background: #f8f9fa; /* Un gris muy claro para el fondo */
-  --color-surface: #ffffff; /* El color de las "tarjetas" y formularios */
-  --color-text: #212529; /* Negro suave para el texto principal */
-  --color-text-secondary: #6c757d; /* Gris para texto secundario */
-  --color-error: #dc3545; /* Rojo para errores */
+  --color-primary: #20c997;
+  --color-primary-hover: #1baa80;
+  --color-accent: #fd7e14;
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text: #212529;
+  --color-text-secondary: #6c757d;
+  --color-error: #dc3545;
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --border-radius: 8px;
   --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -68,16 +68,18 @@ main {
   color: var(--color-text-secondary);
 }
 
-.form-group input {
+.form-group input, .form-group select {
   width: 100%;
   padding: 0.8rem;
   border: 1px solid #dee2e6;
   border-radius: var(--border-radius);
   box-sizing: border-box;
   transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: var(--font-family);
+  font-size: 1rem;
 }
 
-.form-group input:focus {
+.form-group input:focus, .form-group select:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.25);
@@ -111,7 +113,7 @@ main {
 }
 
 .profile-container h2 {
-    text-align: center;
+  text-align: center;
 }
 
 /* 4. Estilos del Navbar */
@@ -155,5 +157,56 @@ main {
 }
 
 .logout-button:hover {
-    background-color: #e86100;
+  background-color: #e86100;
 }
+
+/* --- ESTILOS PARA LA HERO SECTION DE LA PÁGINA DE INICIO --- */
+/* Este bloque ahora está en el lugar correcto */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  min-height: 70vh;
+}
+
+.hero-content {
+  max-width: 50%;
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  max-width: 45%;
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta-button {
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--border-)}
